@@ -12,11 +12,15 @@ on:
       - main
 
 jobs:
-  tests:
+  backend:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: apps/backend
+
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup PHP
@@ -26,33 +30,33 @@ jobs:
           extensions: mbstring, sqlite3, pdo_sqlite
           coverage: none
 
-      - name: Copy Environment
+      - name: Copy environment
         run: cp .env.example .env
 
-      - name: Install Composer Dependencies
+      - name: Install dependencies
         run: composer install --no-interaction --prefer-dist
 
-      - name: Generate Application Key
+      - name: Generate application key
         run: php artisan key:generate
 
-      - name: Create SQLite Database
+      - name: Create SQLite database
         run: |
           mkdir -p database
           touch database/database.sqlite
 
-      - name: Run Migrations
+      - name: Run migrations
         env:
           DB_CONNECTION: sqlite
           DB_DATABASE: database/database.sqlite
         run: php artisan migrate --force
 
-      - name: Check Code Style
+      - name: Check formatting
         run: vendor/bin/pint --test
 
-      - name: Static Analysis
+      - name: Run static analysis
         run: vendor/bin/phpstan analyse
 
-      - name: Run Tests
+      - name: Run tests
         env:
           DB_CONNECTION: sqlite
           DB_DATABASE: database/database.sqlite
