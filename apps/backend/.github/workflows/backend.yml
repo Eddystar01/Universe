@@ -1,0 +1,59 @@
+name: Backend CI
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+      - feature/**
+  pull_request:
+    branches:
+      - develop
+      - main
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          extensions: mbstring, sqlite3, pdo_sqlite
+          coverage: none
+
+      - name: Copy Environment
+        run: cp .env.example .env
+
+      - name: Install Composer Dependencies
+        run: composer install --no-interaction --prefer-dist
+
+      - name: Generate Application Key
+        run: php artisan key:generate
+
+      - name: Create SQLite Database
+        run: |
+          mkdir -p database
+          touch database/database.sqlite
+
+      - name: Run Migrations
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: database/database.sqlite
+        run: php artisan migrate --force
+
+      - name: Check Code Style
+        run: vendor/bin/pint --test
+
+      - name: Static Analysis
+        run: vendor/bin/phpstan analyse
+
+      - name: Run Tests
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: database/database.sqlite
+        run: php artisan test

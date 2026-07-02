@@ -1,0 +1,61 @@
+<?php declare(strict_types = 1);
+
+// odsl-C:\Users\DELL\Documents\Universe\apps\backend\routes
+return \PHPStan\Cache\CacheItem::__set_state(array(
+   'variableKey' => 'v1-enums',
+   'data' => 
+  array (
+    'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\routes\\api.php' => 
+    array (
+      0 => 'db95266a189b090340772aa4b6403934eba5d09576b474ae86ba06a995c9e275',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\routes\\api\\v1.php' => 
+    array (
+      0 => '678b49991f119f48b486a813f9d8dfad24a81a77f10710c6b2c08d8df35a7cef',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\routes\\console.php' => 
+    array (
+      0 => '9adccc33e7dd400683e434774077c7fdb2f299c5712cedf16a43fdf56f2850fa',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\routes\\web.php' => 
+    array (
+      0 => '248c7eeeb43bb61ee4fb6603e52b44843c64f72a841d671bcd41871aab23f970',
+      1 => 
+      array (
+      ),
+      2 => 
+      array (
+      ),
+      3 => 
+      array (
+      ),
+    ),
+  ),
+));

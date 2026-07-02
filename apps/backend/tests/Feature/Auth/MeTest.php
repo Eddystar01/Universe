@@ -11,7 +11,7 @@ class MeTest extends TestCase
     use RefreshDatabase;
 
     private const ME_ENDPOINT = '/api/v1/auth/me';
-    
+
     public function test_authenticated_user_can_view_profile(): void
     {
         $user = User::factory()->student()->create();
