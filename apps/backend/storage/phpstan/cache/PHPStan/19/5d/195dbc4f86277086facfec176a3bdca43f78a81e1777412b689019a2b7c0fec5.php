@@ -182,5 +182,106 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
       array (
       ),
     ),
+    'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\UniversityController.php' => 
+    array (
+      0 => 'cd2bb503151898fd5de3aab51ada4e239fd095129838a235ba71bb6b2704345a',
+      1 => 
+      array (
+        0 => 'app\\http\\controllers\\api\\v1\\universitycontroller',
+      ),
+      2 => 
+      array (
+        0 => 'app\\http\\controllers\\api\\v1\\__construct',
+        1 => 'app\\http\\controllers\\api\\v1\\index',
+        2 => 'app\\http\\controllers\\api\\v1\\show',
+        3 => 'app\\http\\controllers\\api\\v1\\store',
+        4 => 'app\\http\\controllers\\api\\v1\\update',
+        5 => 'app\\http\\controllers\\api\\v1\\destroy',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Requests\\University\\StoreUniversityRequest.php' => 
+    array (
+      0 => '67cc23a5cab0045be691ab36808bc87b63fefce861436f34368d00d87824d70b',
+      1 => 
+      array (
+        0 => 'app\\http\\requests\\university\\storeuniversityrequest',
+      ),
+      2 => 
+      array (
+        0 => 'app\\http\\requests\\university\\authorize',
+        1 => 'app\\http\\requests\\university\\rules',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Requests\\University\\UpdateUniversityRequest.php' => 
+    array (
+      0 => '6fefe0db9754b15d0c8b9bda2aa57bacc4875bebedd0de3b637d6559679b6e68',
+      1 => 
+      array (
+        0 => 'app\\http\\requests\\university\\updateuniversityrequest',
+      ),
+      2 => 
+      array (
+        0 => 'app\\http\\requests\\university\\authorize',
+        1 => 'app\\http\\requests\\university\\rules',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Resources\\UniversityResource.php' => 
+    array (
+      0 => '47aa25f0943ad6775786fce0f8faa9118dfdcf4499347709743c0da3c191bb17',
+      1 => 
+      array (
+        0 => 'app\\http\\resources\\universityresource',
+      ),
+      2 => 
+      array (
+        0 => 'app\\http\\resources\\toarray',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Models\\University.php' => 
+    array (
+      0 => '469e8c671714c9c65701e0e7c2f918f13c51689c98c67de40390a037d72459db',
+      1 => 
+      array (
+        0 => 'app\\models\\university',
+      ),
+      2 => 
+      array (
+        0 => 'app\\models\\casts',
+      ),
+      3 => 
+      array (
+      ),
+    ),
+    'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Services\\University\\UniversityService.php' => 
+    array (
+      0 => 'b8bbcaac13f8a6cdd1ad44ebf13200d6ff0728e6912917683b56cac8c3a24f2c',
+      1 => 
+      array (
+        0 => 'app\\services\\university\\universityservice',
+      ),
+      2 => 
+      array (
+        0 => 'app\\services\\university\\index',
+        1 => 'app\\services\\university\\show',
+        2 => 'app\\services\\university\\store',
+        3 => 'app\\services\\university\\update',
+        4 => 'app\\services\\university\\destroy',
+      ),
+      3 => 
+      array (
+      ),
+    ),
   ),
 ));

@@ -1907,6 +1907,19 @@ return [
       ),
     ),
   ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\UniversityController.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\ConstructorWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Http\\Controllers\\Api\\V1\\UniversityController',
+        1 => 
+        array (
+        ),
+      ),
+    ),
+  ),
   'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Requests\\Auth\\LoginRequest.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
@@ -1955,6 +1968,54 @@ return [
       ),
     ),
   ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Requests\\University\\StoreUniversityRequest.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Http\\Requests\\University\\StoreUniversityRequest',
+        1 => 'authorize',
+        2 => 'App\\Http\\Requests\\University\\StoreUniversityRequest',
+        3 => 
+        array (
+        ),
+      ),
+      1 => 
+      array (
+        0 => 'App\\Http\\Requests\\University\\StoreUniversityRequest',
+        1 => 'rules',
+        2 => 'App\\Http\\Requests\\University\\StoreUniversityRequest',
+        3 => 
+        array (
+        ),
+      ),
+    ),
+  ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Requests\\University\\UpdateUniversityRequest.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Http\\Requests\\University\\UpdateUniversityRequest',
+        1 => 'authorize',
+        2 => 'App\\Http\\Requests\\University\\UpdateUniversityRequest',
+        3 => 
+        array (
+        ),
+      ),
+      1 => 
+      array (
+        0 => 'App\\Http\\Requests\\University\\UpdateUniversityRequest',
+        1 => 'rules',
+        2 => 'App\\Http\\Requests\\University\\UpdateUniversityRequest',
+        3 => 
+        array (
+        ),
+      ),
+    ),
+  ),
   'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Resources\\Auth\\UserResource.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
@@ -1970,6 +2031,21 @@ return [
       ),
     ),
   ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Resources\\UniversityResource.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Http\\Resources\\UniversityResource',
+        1 => 'toArray',
+        2 => 'App\\Http\\Resources\\UniversityResource',
+        3 => 
+        array (
+        ),
+      ),
+    ),
+  ),
   'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Models\\Role.php' => 
   array (
     'PHPStan\\Rules\\Traits\\TraitUseCollector' => 
@@ -1977,6 +2053,29 @@ return [
       0 => 
       array (
         0 => 'Illuminate\\Database\\Eloquent\\Concerns\\HasUuids',
+      ),
+    ),
+  ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Models\\University.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Models\\University',
+        1 => 'casts',
+        2 => 'App\\Models\\University',
+        3 => 
+        array (
+        ),
+      ),
+    ),
+    'PHPStan\\Rules\\Traits\\TraitUseCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
+        1 => 'Illuminate\\Database\\Eloquent\\Concerns\\HasUuids',
       ),
     ),
   ),
@@ -2005,6 +2104,32 @@ return [
       ),
     ),
   ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Services\\University\\UniversityService.php' => 
+  array (
+    'PHPStan\\Rules\\DeadCode\\MethodWithoutImpurePointsCollector' => 
+    array (
+      0 => 
+      array (
+        0 => 'App\\Services\\University\\UniversityService',
+        1 => 'show',
+        2 => 'App\\Services\\University\\UniversityService',
+        3 => 
+        array (
+        ),
+      ),
+      1 => 
+      array (
+        0 => 'App\\Services\\University\\UniversityService',
+        1 => 'store',
+        2 => 'App\\Services\\University\\UniversityService',
+        3 => 
+        array (
+          0 => 'm' . "\0" . 'illuminate\\support\\str' . "\0" . 'slug',
+          1 => 'm' . "\0" . 'illuminate\\database\\eloquent\\builder' . "\0" . 'create',
+        ),
+      ),
+    ),
+  ),
   'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\routes\\api\\v1.php' => 
   array (
     'PHPStan\\Rules\\DeadCode\\PossiblyPureStaticCallCollector' => 
@@ -2013,31 +2138,61 @@ return [
       array (
         0 => 'Illuminate\\Support\\Facades\\Route',
         1 => 'get',
-        2 => 7,
+        2 => 8,
       ),
       1 => 
       array (
         0 => 'Illuminate\\Support\\Facades\\Route',
         1 => 'post',
-        2 => 10,
+        2 => 11,
       ),
       2 => 
       array (
         0 => 'Illuminate\\Support\\Facades\\Route',
         1 => 'post',
-        2 => 11,
+        2 => 12,
       ),
       3 => 
       array (
         0 => 'Illuminate\\Support\\Facades\\Route',
         1 => 'get',
-        2 => 14,
+        2 => 15,
       ),
       4 => 
       array (
         0 => 'Illuminate\\Support\\Facades\\Route',
         1 => 'post',
-        2 => 15,
+        2 => 16,
+      ),
+      5 => 
+      array (
+        0 => 'Illuminate\\Support\\Facades\\Route',
+        1 => 'get',
+        2 => 20,
+      ),
+      6 => 
+      array (
+        0 => 'Illuminate\\Support\\Facades\\Route',
+        1 => 'post',
+        2 => 21,
+      ),
+      7 => 
+      array (
+        0 => 'Illuminate\\Support\\Facades\\Route',
+        1 => 'get',
+        2 => 22,
+      ),
+      8 => 
+      array (
+        0 => 'Illuminate\\Support\\Facades\\Route',
+        1 => 'put',
+        2 => 23,
+      ),
+      9 => 
+      array (
+        0 => 'Illuminate\\Support\\Facades\\Route',
+        1 => 'delete',
+        2 => 24,
       ),
     ),
   ),
@@ -2075,6 +2230,14 @@ return [
       0 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\routes\\api\\v1.php',
     ),
   ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\UniversityController.php' => 
+  array (
+    'fileHash' => 'cd2bb503151898fd5de3aab51ada4e239fd095129838a235ba71bb6b2704345a',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\routes\\api\\v1.php',
+    ),
+  ),
   'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Controller.php' => 
   array (
     'fileHash' => '25d1c1ef8e6cc8a376553faacfba2b07d9dfaee9bdbb84f14f77517580e9deb1',
@@ -2082,7 +2245,8 @@ return [
     array (
       0 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\Auth\\AuthController.php',
       1 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\HealthController.php',
-      2 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\routes\\api\\v1.php',
+      2 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\UniversityController.php',
+      3 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\routes\\api\\v1.php',
     ),
   ),
   'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Requests\\Auth\\LoginRequest.php' => 
@@ -2101,12 +2265,36 @@ return [
       0 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\Auth\\AuthController.php',
     ),
   ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Requests\\University\\StoreUniversityRequest.php' => 
+  array (
+    'fileHash' => '67cc23a5cab0045be691ab36808bc87b63fefce861436f34368d00d87824d70b',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\UniversityController.php',
+    ),
+  ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Requests\\University\\UpdateUniversityRequest.php' => 
+  array (
+    'fileHash' => '6fefe0db9754b15d0c8b9bda2aa57bacc4875bebedd0de3b637d6559679b6e68',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\UniversityController.php',
+    ),
+  ),
   'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Resources\\Auth\\UserResource.php' => 
   array (
     'fileHash' => '589f84e49c11b2a2ca62ba5ee86bb281ff9daf66dd974b6655631605d753ad41',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\Auth\\AuthController.php',
+    ),
+  ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Resources\\UniversityResource.php' => 
+  array (
+    'fileHash' => '47aa25f0943ad6775786fce0f8faa9118dfdcf4499347709743c0da3c191bb17',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\UniversityController.php',
     ),
   ),
   'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Models\\Role.php' => 
@@ -2118,6 +2306,16 @@ return [
       1 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Resources\\Auth\\UserResource.php',
       2 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Models\\User.php',
       3 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Services\\Auth\\AuthService.php',
+    ),
+  ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Models\\University.php' => 
+  array (
+    'fileHash' => '469e8c671714c9c65701e0e7c2f918f13c51689c98c67de40390a037d72459db',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\UniversityController.php',
+      1 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Resources\\UniversityResource.php',
+      2 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Services\\University\\UniversityService.php',
     ),
   ),
   'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Models\\User.php' => 
@@ -2146,6 +2344,14 @@ return [
       0 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\Auth\\AuthController.php',
     ),
   ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Services\\University\\UniversityService.php' => 
+  array (
+    'fileHash' => 'b8bbcaac13f8a6cdd1ad44ebf13200d6ff0728e6912917683b56cac8c3a24f2c',
+    'dependentFiles' => 
+    array (
+      0 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\UniversityController.php',
+    ),
+  ),
   'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Support\\ApiResponse.php' => 
   array (
     'fileHash' => '7a6e9498b63f3315818dd859e2aa57e9edd61d86adfc36af9b064028d23fc9a8',
@@ -2163,7 +2369,7 @@ return [
   ),
   'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\routes\\api\\v1.php' => 
   array (
-    'fileHash' => '678b49991f119f48b486a813f9d8dfad24a81a77f10710c6b2c08d8df35a7cef',
+    'fileHash' => 'd1c820efcc20719e7d205a5330fc90186ff0459b5cc0abe28b105d7a1c81ab2f',
     'dependentFiles' => 
     array (
     ),
@@ -2260,6 +2466,34 @@ return [
   array (
     0 => 'laravel/framework',
     1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\UniversityController.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Requests\\University\\StoreUniversityRequest.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Requests\\University\\UpdateUniversityRequest.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Resources\\UniversityResource.php' => 
+  array (
+    0 => 'laravel/framework',
+    1 => 'symfony/http-foundation',
+  ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Models\\University.php' => 
+  array (
+    0 => 'laravel/framework',
+  ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Services\\University\\UniversityService.php' => 
+  array (
+    0 => 'laravel/framework',
   ),
 ),
 	'exportedNodesCallback' => static function (): array { return array (
@@ -2488,6 +2722,218 @@ return [
       ),
     )),
   ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\UniversityController.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Controllers\\Api\\V1\\UniversityController',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'App\\Http\\Controllers\\Controller',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => '__construct',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => NULL,
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'service',
+               'type' => 'App\\Services\\University\\UniversityService',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 2,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'index',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Http\\JsonResponse',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'show',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Http\\JsonResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'university',
+               'type' => 'App\\Models\\University',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'store',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Http\\JsonResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'App\\Http\\Requests\\University\\StoreUniversityRequest',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'update',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Http\\JsonResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'App\\Http\\Requests\\University\\UpdateUniversityRequest',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'university',
+               'type' => 'App\\Models\\University',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        5 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'destroy',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Http\\JsonResponse',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'university',
+               'type' => 'App\\Models\\University',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
   'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Controller.php' => 
   array (
     0 => 
@@ -2638,6 +3084,130 @@ return [
       ),
     )),
   ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Requests\\University\\StoreUniversityRequest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Requests\\University\\StoreUniversityRequest',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Foundation\\Http\\FormRequest',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'authorize',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'rules',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Requests\\University\\UpdateUniversityRequest.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Requests\\University\\UpdateUniversityRequest',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Foundation\\Http\\FormRequest',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'authorize',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'bool',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'rules',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
   'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Resources\\Auth\\UserResource.php' => 
   array (
     0 => 
@@ -2652,6 +3222,77 @@ return [
          'uses' => 
         array (
           'user' => 'App\\Models\\User',
+          'request' => 'Illuminate\\Http\\Request',
+          'jsonresource' => 'Illuminate\\Http\\Resources\\Json\\JsonResource',
+        ),
+         'constUses' => 
+        array (
+        ),
+      )),
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Http\\Resources\\Json\\JsonResource',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'toArray',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'request',
+               'type' => 'Illuminate\\Http\\Request',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Resources\\UniversityResource.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Http\\Resources\\UniversityResource',
+       'phpDoc' => 
+      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+         'phpDocString' => '/**
+ * @mixin \\App\\Models\\University
+ */',
+         'namespace' => 'App\\Http\\Resources',
+         'uses' => 
+        array (
           'request' => 'Illuminate\\Http\\Request',
           'jsonresource' => 'Illuminate\\Http\\Resources\\Json\\JsonResource',
         ),
@@ -2817,6 +3458,153 @@ return [
            'final' => false,
            'static' => false,
            'returnType' => 'Illuminate\\Database\\Eloquent\\Relations\\HasMany',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Models\\University.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Models\\University',
+       'phpDoc' => 
+      \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
+         'phpDocString' => '/**
+ * @property string $id
+ * @property string $name
+ * @property string $slug
+ * @property string|null $email
+ * @property string|null $phone
+ * @property string|null $website
+ * @property string|null $logo
+ * @property string|null $address
+ * @property string|null $city
+ * @property string|null $state
+ * @property string $country
+ * @property bool $is_active
+ */',
+         'namespace' => 'App\\Models',
+         'uses' => 
+        array (
+          'hasuuids' => 'Illuminate\\Database\\Eloquent\\Concerns\\HasUuids',
+          'hasfactory' => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
+          'model' => 'Illuminate\\Database\\Eloquent\\Model',
+        ),
+         'constUses' => 
+        array (
+        ),
+      )),
+       'abstract' => false,
+       'final' => false,
+       'extends' => 'Illuminate\\Database\\Eloquent\\Model',
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+        0 => 'Illuminate\\Database\\Eloquent\\Factories\\HasFactory',
+        1 => 'Illuminate\\Database\\Eloquent\\Concerns\\HasUuids',
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'incrementing',
+          ),
+           'phpDoc' => NULL,
+           'type' => NULL,
+           'public' => true,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'keyType',
+          ),
+           'phpDoc' => NULL,
+           'type' => NULL,
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedPropertiesNode::__set_state(array(
+           'names' => 
+          array (
+            0 => 'fillable',
+          ),
+           'phpDoc' => NULL,
+           'type' => NULL,
+           'public' => false,
+           'private' => false,
+           'static' => false,
+           'readonly' => false,
+           'abstract' => false,
+           'final' => false,
+           'publicSet' => false,
+           'protectedSet' => false,
+           'privateSet' => false,
+           'virtual' => false,
+           'attributes' => 
+          array (
+          ),
+           'hooks' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'casts',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => false,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'array',
            'parameters' => 
           array (
           ),
@@ -3232,6 +4020,187 @@ return [
             \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
                'name' => 'credentials',
                'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+      ),
+       'attributes' => 
+      array (
+      ),
+    )),
+  ),
+  'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Services\\University\\UniversityService.php' => 
+  array (
+    0 => 
+    \PHPStan\Dependency\ExportedNode\ExportedClassNode::__set_state(array(
+       'name' => 'App\\Services\\University\\UniversityService',
+       'phpDoc' => NULL,
+       'abstract' => false,
+       'final' => false,
+       'extends' => NULL,
+       'implements' => 
+      array (
+      ),
+       'usedTraits' => 
+      array (
+      ),
+       'traitUseAdaptations' => 
+      array (
+      ),
+       'statements' => 
+      array (
+        0 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'index',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'Illuminate\\Database\\Eloquent\\Collection',
+           'parameters' => 
+          array (
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        1 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'show',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Models\\University',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'university',
+               'type' => 'App\\Models\\University',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        2 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'store',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Models\\University',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'data',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        3 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'update',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'App\\Models\\University',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'university',
+               'type' => 'App\\Models\\University',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+            1 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'data',
+               'type' => 'array',
+               'byRef' => false,
+               'variadic' => false,
+               'hasDefault' => false,
+               'attributes' => 
+              array (
+              ),
+               'phpDoc' => NULL,
+               'flags' => 0,
+            )),
+          ),
+           'attributes' => 
+          array (
+          ),
+        )),
+        4 => 
+        \PHPStan\Dependency\ExportedNode\ExportedMethodNode::__set_state(array(
+           'name' => 'destroy',
+           'phpDoc' => NULL,
+           'byRef' => false,
+           'public' => true,
+           'private' => false,
+           'abstract' => false,
+           'final' => false,
+           'static' => false,
+           'returnType' => 'void',
+           'parameters' => 
+          array (
+            0 => 
+            \PHPStan\Dependency\ExportedNode\ExportedParameterNode::__set_state(array(
+               'name' => 'university',
+               'type' => 'App\\Models\\University',
                'byRef' => false,
                'variadic' => false,
                'hasDefault' => false,

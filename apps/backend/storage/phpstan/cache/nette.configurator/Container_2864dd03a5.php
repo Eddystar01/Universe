@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-class Container_34783b7cce extends _PHPStan_48ec32058\Nette\DI\Container
+class Container_2864dd03a5 extends _PHPStan_48ec32058\Nette\DI\Container
 {
 	protected $tags = [
 		'phpstan.broker.allowedSubTypesClassReflectionExtension' => ['017' => true, '018' => true],
@@ -5914,7 +5914,7 @@ class Container_34783b7cce extends _PHPStan_48ec32058\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_34783b7cce $container)
+			public function __construct(Container_2864dd03a5 $container)
 			{
 				$this->container = $container;
 			}
@@ -5962,7 +5962,7 @@ class Container_34783b7cce extends _PHPStan_48ec32058\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_34783b7cce $container)
+			public function __construct(Container_2864dd03a5 $container)
 			{
 				$this->container = $container;
 			}
@@ -6020,7 +6020,7 @@ class Container_34783b7cce extends _PHPStan_48ec32058\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_34783b7cce $container)
+			public function __construct(Container_2864dd03a5 $container)
 			{
 				$this->container = $container;
 			}
@@ -6087,7 +6087,7 @@ class Container_34783b7cce extends _PHPStan_48ec32058\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_34783b7cce $container)
+			public function __construct(Container_2864dd03a5 $container)
 			{
 				$this->container = $container;
 			}
@@ -6107,7 +6107,7 @@ class Container_34783b7cce extends _PHPStan_48ec32058\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_34783b7cce $container)
+			public function __construct(Container_2864dd03a5 $container)
 			{
 				$this->container = $container;
 			}
@@ -6132,7 +6132,7 @@ class Container_34783b7cce extends _PHPStan_48ec32058\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_34783b7cce $container)
+			public function __construct(Container_2864dd03a5 $container)
 			{
 				$this->container = $container;
 			}
@@ -6152,7 +6152,7 @@ class Container_34783b7cce extends _PHPStan_48ec32058\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_34783b7cce $container)
+			public function __construct(Container_2864dd03a5 $container)
 			{
 				$this->container = $container;
 			}
@@ -6172,7 +6172,7 @@ class Container_34783b7cce extends _PHPStan_48ec32058\Nette\DI\Container
 			private $container;
 
 
-			public function __construct(Container_34783b7cce $container)
+			public function __construct(Container_2864dd03a5 $container)
 			{
 				$this->container = $container;
 			}
@@ -9647,7 +9647,7 @@ class Container_34783b7cce extends _PHPStan_48ec32058\Nette\DI\Container
 	}
 
 
-	public function createServiceContainer(): Container_34783b7cce
+	public function createServiceContainer(): Container_2864dd03a5
 	{
 		return $this;
 	}
@@ -10312,23 +10312,6 @@ class Container_34783b7cce extends _PHPStan_48ec32058\Nette\DI\Container
 				'ALLUSERSPROFILE' => 'C:\ProgramData',
 				'ANDROID_HOME' => 'C:\Users\DELL\AppData\Local\Android\Sdk',
 				'APPDATA' => 'C:\Users\DELL\AppData\Roaming',
-				'APP_DEBUG' => 'true',
-				'APP_ENV' => 'local',
-				'APP_FAKER_LOCALE' => 'en_US',
-				'APP_FALLBACK_LOCALE' => 'en',
-				'APP_KEY' => 'base64:igaOK/z4r7I+tPhThlcRQBA3Zli9nr/lcK7dYPQJxWg=',
-				'APP_LOCALE' => 'en',
-				'APP_MAINTENANCE_DRIVER' => 'file',
-				'APP_NAME' => 'Laravel',
-				'APP_URL' => 'http://localhost',
-				'AWS_ACCESS_KEY_ID' => '',
-				'AWS_BUCKET' => '',
-				'AWS_DEFAULT_REGION' => 'us-east-1',
-				'AWS_SECRET_ACCESS_KEY' => '',
-				'AWS_USE_PATH_STYLE_ENDPOINT' => 'false',
-				'BCRYPT_ROUNDS' => '12',
-				'BROADCAST_CONNECTION' => 'log',
-				'CACHE_STORE' => 'database',
 				'CHROME_CRASHPAD_PIPE_NAME' => '\\\.\pipe\crashpad_8392_CNMLXHLJRCIRKGNS',
 				'COLORTERM' => 'truecolor',
 				'COLUMNS' => '121',
@@ -10341,11 +10324,9 @@ class Container_34783b7cce extends _PHPStan_48ec32058\Nette\DI\Container
 				'ChocolateyLastPathUpdate' => '134109561893814409',
 				'CommonProgramFiles(x86)' => 'C:\Program Files (x86)\Common Files',
 				'CommonProgramW6432' => 'C:\Program Files\Common Files',
-				'DB_CONNECTION' => 'sqlite',
 				'DISPLAY' => 'needs-to-be-defined',
 				'DriverData' => 'C:\Windows\System32\Drivers\DriverData',
 				'EXEPATH' => 'C:\Program Files\Git\bin',
-				'FILESYSTEM_DISK' => 'local',
 				'GIT_ASKPASS' => 'c:\Users\DELL\AppData\Roaming\Code\User\globalStorage\vscode.git\askpass\70789581cae28aa7\askpass.sh',
 				'HOME' => 'C:\Users\DELL',
 				'HOMEDRIVE' => 'C:',
@@ -10357,20 +10338,7 @@ class Container_34783b7cce extends _PHPStan_48ec32058\Nette\DI\Container
 				'LINES' => '12',
 				'LOCALAPPDATA' => 'C:\Users\DELL\AppData\Local',
 				'LOGONSERVER' => '\\\DESKTOP-HMRP1T5',
-				'LOG_CHANNEL' => 'stack',
-				'LOG_DEPRECATIONS_CHANNEL' => 'null',
-				'LOG_LEVEL' => 'debug',
-				'LOG_STACK' => 'single',
-				'MAIL_FROM_ADDRESS' => 'hello@example.com',
-				'MAIL_FROM_NAME' => 'Laravel',
-				'MAIL_HOST' => '127.0.0.1',
-				'MAIL_MAILER' => 'log',
-				'MAIL_PASSWORD' => 'null',
-				'MAIL_PORT' => '2525',
-				'MAIL_SCHEME' => 'null',
-				'MAIL_USERNAME' => 'null',
 				'MANPATH' => 'C:\Program Files\Git\mingw64\local\man;C:\Program Files\Git\mingw64\share\man;C:\Program Files\Git\usr\local\man;C:\Program Files\Git\usr\share\man;C:\Program Files\Git\usr\man;C:\Program Files\Git\share\man',
-				'MEMCACHED_HOST' => '127.0.0.1',
 				'MINGW_CHOST' => 'x86_64-w64-mingw32',
 				'MINGW_PACKAGE_PREFIX' => 'mingw-w64-x86_64',
 				'MINGW_PREFIX' => 'C:/Program Files/Git/mingw64',
@@ -10404,17 +10372,7 @@ class Container_34783b7cce extends _PHPStan_48ec32058\Nette\DI\Container
 				'ProgramData' => 'C:\ProgramData',
 				'ProgramFiles(x86)' => 'C:\Program Files (x86)',
 				'ProgramW6432' => 'C:\Program Files',
-				'QUEUE_CONNECTION' => 'database',
-				'REDIS_CLIENT' => 'phpredis',
-				'REDIS_HOST' => '127.0.0.1',
-				'REDIS_PASSWORD' => 'null',
-				'REDIS_PORT' => '6379',
 				'SESSIONNAME' => 'Console',
-				'SESSION_DOMAIN' => 'null',
-				'SESSION_DRIVER' => 'database',
-				'SESSION_ENCRYPT' => 'false',
-				'SESSION_LIFETIME' => '120',
-				'SESSION_PATH' => '/',
 				'SHELL' => 'C:\Program Files\Git\usr\bin\bash.exe',
 				'SHELL_VERBOSITY' => '0',
 				'SHLVL' => '1',
@@ -10432,7 +10390,6 @@ class Container_34783b7cce extends _PHPStan_48ec32058\Nette\DI\Container
 				'USERNAME' => 'DELL',
 				'USERPROFILE' => 'C:\Users\DELL',
 				'VBOX_MSI_INSTALL_PATH' => 'C:\Program Files\Oracle\VirtualBox\\',
-				'VITE_APP_NAME' => 'Laravel',
 				'VSCODE_GIT_ASKPASS_EXTRA_ARGS' => '',
 				'VSCODE_GIT_ASKPASS_MAIN' => 'c:\Users\DELL\AppData\Roaming\Code\User\globalStorage\vscode.git\askpass\70789581cae28aa7\askpass-main.js',
 				'VSCODE_GIT_ASKPASS_NODE' => 'C:\Users\DELL\AppData\Local\Programs\Microsoft VS Code\Code.exe',
