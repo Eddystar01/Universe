@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\Api\V1\Auth;
-
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\RegisterRequest;
 use App\Http\Resources\Auth\UserResource;
 use App\Services\Auth\AuthService;
 use Illuminate\Http\JsonResponse;
+use App\Http\Requests\Auth\LoginRequest;
 
 class AuthController extends Controller
 {
@@ -28,5 +29,47 @@ class AuthController extends Controller
                 'token' => $result['token'],
             ],
         ], 201);
+    }
+
+    public function login(LoginRequest $request): JsonResponse
+    {
+        $result = $this->authService->login(
+            $request->validated()
+        );
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Login successful.',
+            'data' => [
+                'user' => new UserResource($result['user']),
+                'authorization' => [
+                    'type' => 'Bearer',
+                    'token' => $result['token'],
+                ],
+            ],
+        ]);
+    }
+
+    public function me(Request $request): JsonResponse
+    {
+        return response()->json([
+            'success' => true,
+            'message' => 'Authenticated user retrieved successfully.',
+            'data' => [
+                'user' => new UserResource(
+                    $this->authService->me($request->user())
+                ),
+            ],
+        ]);
+    }
+
+    public function logout(Request $request): JsonResponse
+    {
+        $this->authService->logout($request->user());
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Logout successful.',
+        ]);
     }
 }

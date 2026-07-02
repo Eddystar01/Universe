@@ -1,0 +1,155 @@
+warning: in the working copy of 'apps/backend/app/Services/Auth/AuthService.php', CRLF will be replaced by LF the next time Git touches it
+warning: in the working copy of 'apps/backend/routes/api/v1.php', CRLF will be replaced by LF the next time Git touches it
+[1mdiff --git a/apps/backend/app/Http/Controllers/Api/V1/Auth/AuthController.php b/apps/backend/app/Http/Controllers/Api/V1/Auth/AuthController.php[m
+[1mindex b0d61d2..d650a8b 100644[m
+[1m--- a/apps/backend/app/Http/Controllers/Api/V1/Auth/AuthController.php[m
+[1m+++ b/apps/backend/app/Http/Controllers/Api/V1/Auth/AuthController.php[m
+[36m@@ -1,12 +1,13 @@[m
+ <?php[m
+ [m
+ namespace App\Http\Controllers\Api\V1\Auth;[m
+[31m-[m
+[32m+[m[32muse Illuminate\Http\Request;[m
+ use App\Http\Controllers\Controller;[m
+ use App\Http\Requests\Auth\RegisterRequest;[m
+ use App\Http\Resources\Auth\UserResource;[m
+ use App\Services\Auth\AuthService;[m
+ use Illuminate\Http\JsonResponse;[m
+[32m+[m[32muse App\Http\Requests\Auth\LoginRequest;[m
+ [m
+ class AuthController extends Controller[m
+ {[m
+[36m@@ -29,4 +30,46 @@[m [mpublic function register(RegisterRequest $request): JsonResponse[m
+             ],[m
+         ], 201);[m
+     }[m
+[32m+[m
+[32m+[m[32m    public function login(LoginRequest $request): JsonResponse[m
+[32m+[m[32m    {[m
+[32m+[m[32m        $result = $this->authService->login([m
+[32m+[m[32m            $request->validated()[m
+[32m+[m[32m        );[m
+[32m+[m
+[32m+[m[32m        return response()->json([[m
+[32m+[m[32m            'success' => true,[m
+[32m+[m[32m            'message' => 'Login successful.',[m
+[32m+[m[32m            'data' => [[m
+[32m+[m[32m                'user' => new UserResource($result['user']),[m
+[32m+[m[32m                'authorization' => [[m
+[32m+[m[32m                    'type' => 'Bearer',[m
+[32m+[m[32m                    'token' => $result['token'],[m
+[32m+[m[32m                ],[m
+[32m+[m[32m            ],[m
+[32m+[m[32m        ]);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    public function me(Request $request): JsonResponse[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return response()->json([[m
+[32m+[m[32m            'success' => true,[m
+[32m+[m[32m            'message' => 'Authenticated user retrieved successfully.',[m
+[32m+[m[32m            'data' => [[m
+[32m+[m[32m                'user' => new UserResource([m
+[32m+[m[32m                    $this->authService->me($request->user())[m
+[32m+[m[32m                ),[m
+[32m+[m[32m            ],[m
+[32m+[m[32m        ]);[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    public function logout(Request $request): JsonResponse[m
+[32m+[m[32m    {[m
+[32m+[m[32m        $this->authService->logout($request->user());[m
+[32m+[m
+[32m+[m[32m        return response()->json([[m
+[32m+[m[32m            'success' => true,[m
+[32m+[m[32m            'message' => 'Logout successful.',[m
+[32m+[m[32m        ]);[m
+[32m+[m[32m    }[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/apps/backend/app/Services/Auth/AuthService.php b/apps/backend/app/Services/Auth/AuthService.php[m
+[1mindex 060babc..c65fa00 100644[m
+[1m--- a/apps/backend/app/Services/Auth/AuthService.php[m
+[1m+++ b/apps/backend/app/Services/Auth/AuthService.php[m
+[36m@@ -5,9 +5,21 @@[m
+ use App\Models\Role;[m
+ use App\Models\User;[m
+ use Illuminate\Support\Facades\DB;[m
+[32m+[m[32muse Illuminate\Support\Facades\Hash;[m
+[32m+[m[32muse Illuminate\Validation\ValidationException;[m
+ [m
+ class AuthService[m
+ {[m
+[32m+[m[32m    public function me(User $user): User[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return $user->load('role');[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    public function logout(User $user): void[m
+[32m+[m[32m    {[m
+[32m+[m[32m        $user->currentAccessToken()?->delete();[m
+[32m+[m[32m    }[m
+[32m+[m[41m    [m
+     public function register(array $data): array[m
+     {[m
+         return DB::transaction(function () use ($data) {[m
+[36m@@ -21,9 +33,39 @@[m [mpublic function register(array $data): array[m
+                 'password' => $data['password'],[m
+             ]);[m
+ [m
+[31m-            $token = $user->createToken('auth_token')->plainTextToken;[m
+[31m-[m
+[31m-            return compact('user', 'token');[m
+[32m+[m[32m            return $this->createAuthResponse($user);[m
+         });[m
+     }[m
+[32m+[m
+[32m+[m[32m    private function createAuthResponse(User $user): array[m
+[32m+[m[32m    {[m
+[32m+[m[32m        return [[m
+[32m+[m[32m            'user' => $user->load('role'),[m
+[32m+[m[32m            'token' => $user->createToken('auth_token')->plainTextToken,[m
+[32m+[m[32m        ];[m
+[32m+[m[32m    }[m
+[32m+[m[32m    public function login(array $credentials): array[m
+[32m+[m[32m    {[m
+[32m+[m[32m        $user = User::with('role')[m
+[32m+[m[32m            ->where('email', $credentials['email'])[m
+[32m+[m[32m            ->first();[m
+[32m+[m
+[32m+[m[32m        if (! $user || ! Hash::check($credentials['password'], $user->password)) {[m
+[32m+[m[32m            throw ValidationException::withMessages([[m
+[32m+[m[32m                'email' => ['The provided credentials are incorrect.'],[m
+[32m+[m[32m            ]);[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        if (! $user->is_active) {[m
+[32m+[m[32m            throw ValidationException::withMessages([[m
+[32m+[m[32m                'email' => ['Your account has been deactivated.'],[m
+[32m+[m[32m            ]);[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m[32m        $user->update([[m
+[32m+[m[32m            'last_login_at' => now(),[m
+[32m+[m[32m        ]);[m
+[32m+[m
+[32m+[m[32m        return $this->createAuthResponse($user);[m
+[32m+[m[32m    }[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/apps/backend/routes/api/v1.php b/apps/backend/routes/api/v1.php[m
+[1mindex fecc359..1df7b86 100644[m
+[1m--- a/apps/backend/routes/api/v1.php[m
+[1m+++ b/apps/backend/routes/api/v1.php[m
+[36m@@ -8,4 +8,10 @@[m
+ [m
+ Route::prefix('auth')->group(function () {[m
+     Route::post('/register', [AuthController::class, 'register']);[m
+[32m+[m[32m    Route::post('/login', [AuthController::class, 'login']);[m
+[32m+[m
+[32m+[m[32m    Route::middleware('auth:sanctum')->group(function () {[m
+[32m+[m[32m        Route::get('/me', [AuthController::class, 'me']);[m
+[32m+[m[32m        Route::post('/logout', [AuthController::class, 'logout']);[m
+[32m+[m[32m    });[m
+ });[m
+\ No newline at end of file[m

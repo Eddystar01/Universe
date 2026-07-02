@@ -5,9 +5,21 @@ namespace App\Services\Auth;
 use App\Models\Role;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
 
 class AuthService
 {
+    public function me(User $user): User
+    {
+        return $user->load('role');
+    }
+
+    public function logout(User $user): void
+    {
+        $user->currentAccessToken()?->delete();
+    }
+    
     public function register(array $data): array
     {
         return DB::transaction(function () use ($data) {
@@ -21,9 +33,39 @@ class AuthService
                 'password' => $data['password'],
             ]);
 
-            $token = $user->createToken('auth_token')->plainTextToken;
-
-            return compact('user', 'token');
+            return $this->createAuthResponse($user);
         });
+    }
+
+    private function createAuthResponse(User $user): array
+    {
+        return [
+            'user' => $user->load('role'),
+            'token' => $user->createToken('auth_token')->plainTextToken,
+        ];
+    }
+    public function login(array $credentials): array
+    {
+        $user = User::with('role')
+            ->where('email', $credentials['email'])
+            ->first();
+
+        if (! $user || ! Hash::check($credentials['password'], $user->password)) {
+            throw ValidationException::withMessages([
+                'email' => ['The provided credentials are incorrect.'],
+            ]);
+        }
+
+        if (! $user->is_active) {
+            throw ValidationException::withMessages([
+                'email' => ['Your account has been deactivated.'],
+            ]);
+        }
+
+        $user->update([
+            'last_login_at' => now(),
+        ]);
+
+        return $this->createAuthResponse($user);
     }
 }
