@@ -1736,7 +1736,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     ),
     1 => 
     array (
-      'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Models\\User.php' => '8f37fefe97486d480e01f407c3200e0ffb08693db91617f856228003ff53a4c5',
+      'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Models\\User.php' => '0cd944944f9479ebbd633213dece56fbab39af72df8b5e58b0d49a925652d879',
       'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\vendor\\composer\\..\\laravel\\sanctum\\src\\HasApiTokens.php' => '7400600b832dc377ac5f51d051a917775f6efc0d2176a1de7bd7826499ae6509',
       'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factories\\HasFactory.php' => 'b6cb2b164e90168e80963a5549541f5f3188a3ec8cfd368bf3611bd94fbd46a7',
       'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\vendor\\composer\\..\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\HasUuids.php' => 'f75b8db33aafd61f17652a5e4bb5b8989e62197b306e9f7ae60bb3ac2c34d534',

@@ -2122,7 +2122,7 @@ return [
   ),
   'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Models\\User.php' => 
   array (
-    'fileHash' => '8f37fefe97486d480e01f407c3200e0ffb08693db91617f856228003ff53a4c5',
+    'fileHash' => '0cd944944f9479ebbd633213dece56fbab39af72df8b5e58b0d49a925652d879',
     'dependentFiles' => 
     array (
       0 => 'C:\\Users\\DELL\\Documents\\Universe\\apps\\backend\\app\\Http\\Controllers\\Api\\V1\\Auth\\AuthController.php',
@@ -2838,7 +2838,7 @@ return [
        'phpDoc' => 
       \PHPStan\Dependency\ExportedNode\ExportedPhpDocNode::__set_state(array(
          'phpDocString' => '/**
- * @property-read \\App\\Models\\Role $role
+ * @property-read Role $role
  */',
          'namespace' => 'App\\Models',
          'uses' => 

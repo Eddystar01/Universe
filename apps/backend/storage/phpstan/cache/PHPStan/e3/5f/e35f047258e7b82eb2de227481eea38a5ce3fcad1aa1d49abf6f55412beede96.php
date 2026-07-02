@@ -2,7 +2,7 @@
 
 // odsl-C:\Users\DELL\Documents\Universe\apps\backend\app\Models\User.php-PHPStan\BetterReflection\Reflection\ReflectionClass-App\Models\User
 return \PHPStan\Cache\CacheItem::__set_state(array(
-   'variableKey' => 'v2-6.70.0.1-8.2.12-8f37fefe97486d480e01f407c3200e0ffb08693db91617f856228003ff53a4c5',
+   'variableKey' => 'v2-6.70.0.1-8.2.12-0cd944944f9479ebbd633213dece56fbab39af72df8b5e58b0d49a925652d879',
    'data' => 
   array (
     'locatedSource' => 
@@ -23,7 +23,7 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
     'isBackedEnum' => false,
     'modifiers' => 0,
     'docComment' => '/**
- * @property-read \\App\\Models\\Role $role
+ * @property-read Role $role
  */',
     'attributes' => 
     array (
@@ -63,9 +63,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'startLine' => 19,
             'endLine' => 19,
             'startTokenPos' => 73,
-            'startFilePos' => 493,
+            'startFilePos' => 481,
             'endTokenPos' => 73,
-            'endFilePos' => 497,
+            'endFilePos' => 485,
           ),
         ),
         'docComment' => NULL,
@@ -98,9 +98,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'startLine' => 21,
             'endLine' => 21,
             'startTokenPos' => 82,
-            'startFilePos' => 526,
+            'startFilePos' => 514,
             'endTokenPos' => 82,
-            'endFilePos' => 533,
+            'endFilePos' => 521,
           ),
         ),
         'docComment' => NULL,
@@ -133,9 +133,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'startLine' => 23,
             'endLine' => 30,
             'startTokenPos' => 91,
-            'startFilePos' => 563,
+            'startFilePos' => 551,
             'endTokenPos' => 111,
-            'endFilePos' => 687,
+            'endFilePos' => 675,
           ),
         ),
         'docComment' => NULL,
@@ -168,9 +168,9 @@ return \PHPStan\Cache\CacheItem::__set_state(array(
             'startLine' => 32,
             'endLine' => 35,
             'startTokenPos' => 120,
-            'startFilePos' => 715,
+            'startFilePos' => 703,
             'endTokenPos' => 128,
-            'endFilePos' => 767,
+            'endFilePos' => 755,
           ),
         ),
         'docComment' => NULL,
