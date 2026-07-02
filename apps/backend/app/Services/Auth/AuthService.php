@@ -17,9 +17,9 @@ class AuthService
 
     public function logout(User $user): void
     {
-        $user->currentAccessToken()?->delete();
+        $user->currentAccessToken()->delete();
     }
-    
+
     public function register(array $data): array
     {
         return DB::transaction(function () use ($data) {
@@ -44,6 +44,7 @@ class AuthService
             'token' => $user->createToken('auth_token')->plainTextToken,
         ];
     }
+
     public function login(array $credentials): array
     {
         $user = User::with('role')
