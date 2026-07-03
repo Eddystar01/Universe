@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\V1\Auth\AuthController;
+use App\Http\Controllers\Api\V1\DepartmentController;
 use App\Http\Controllers\Api\V1\HealthController;
 use App\Http\Controllers\Api\V1\UniversityController;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +23,8 @@ Route::post('/universities', [UniversityController::class, 'store']);
 Route::get('/universities/{university}', [UniversityController::class, 'show']);
 Route::put('/universities/{university}', [UniversityController::class, 'update']);
 Route::delete('/universities/{university}', [UniversityController::class, 'destroy']);
+Route::get('/departments', [DepartmentController::class, 'index']);
+Route::get('/departments/{id}', [DepartmentController::class, 'show']);
+Route::post('/departments', [DepartmentController::class, 'store']);
+Route::put('/departments/{id}', [DepartmentController::class, 'update']);
+Route::delete('/departments/{id}', [DepartmentController::class, 'destroy']);
