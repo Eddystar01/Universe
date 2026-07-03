@@ -6,12 +6,20 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
- * @property-read University $university
+ * @property string $id
+ * @property string $department_id
+ * @property string $name
+ * @property string $slug
+ * @property string $code
+ * @property int $level
+ * @property int $credit_units
+ * @property string|null $description
+ * @property bool $is_active
+ * @property-read Department $department
  */
-class Department extends Model
+class Course extends Model
 {
     use HasFactory, HasUuids;
 
@@ -20,10 +28,12 @@ class Department extends Model
     protected $keyType = 'string';
 
     protected $fillable = [
-        'university_id',
+        'department_id',
         'name',
         'slug',
         'code',
+        'level',
+        'credit_units',
         'description',
         'is_active',
     ];
@@ -36,18 +46,10 @@ class Department extends Model
     }
 
     /**
-     * @return BelongsTo<University, $this>
+     * @return BelongsTo<Department, $this>
      */
-    public function university(): BelongsTo
+    public function department(): BelongsTo
     {
-        return $this->belongsTo(University::class);
-    }
-
-    /**
-     * @return HasMany<Course, $this>
-     */
-    public function courses(): HasMany
-    {
-        return $this->hasMany(Course::class);
+        return $this->belongsTo(Department::class);
     }
 }
