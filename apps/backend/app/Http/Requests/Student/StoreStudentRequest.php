@@ -2,7 +2,6 @@
 
 namespace App\Http\Requests\Student;
 
-use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreStudentRequest extends FormRequest
@@ -12,18 +11,22 @@ class StoreStudentRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
      * Get the validation rules that apply to the request.
-     *
-     * @return array<string, ValidationRule|array<mixed>|string>
      */
     public function rules(): array
     {
         return [
-            //
+            'user_id' => ['required', 'exists:users,id'],
+            'department_id' => ['required', 'exists:departments,id'],
+
+            'matric_number' => ['required', 'string', 'max:50', 'unique:students,matric_number'],
+            'level' => ['required', 'string', 'max:10'],
+            'phone' => ['nullable', 'string', 'max:20'],
+            'is_active' => ['required', 'boolean'],
         ];
     }
 }

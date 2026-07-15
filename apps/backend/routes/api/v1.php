@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\V1\CourseController;
 use App\Http\Controllers\Api\V1\DepartmentController;
 use App\Http\Controllers\Api\V1\HealthController;
 use App\Http\Controllers\Api\V1\LecturerController;
+use App\Http\Controllers\Api\V1\StudentController;
 use App\Http\Controllers\Api\V1\UniversityController;
 use Illuminate\Support\Facades\Route;
 

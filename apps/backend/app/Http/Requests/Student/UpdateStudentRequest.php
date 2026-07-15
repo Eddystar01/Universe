@@ -2,8 +2,8 @@
 
 namespace App\Http\Requests\Student;
 
-use Illuminate\Contracts\Validation\ValidationRule;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class UpdateStudentRequest extends FormRequest
 {
@@ -12,18 +12,30 @@ class UpdateStudentRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
      * Get the validation rules that apply to the request.
-     *
-     * @return array<string, ValidationRule|array<mixed>|string>
      */
     public function rules(): array
     {
+        $studentId = $this->route('student');
+
         return [
-            //
+            'user_id' => ['sometimes', 'exists:users,id'],
+            'department_id' => ['sometimes', 'exists:departments,id'],
+
+            'matric_number' => [
+                'sometimes',
+                'string',
+                'max:50',
+                Rule::unique('students', 'matric_number')->ignore($studentId),
+            ],
+
+            'level' => ['sometimes', 'string', 'max:10'],
+            'phone' => ['nullable', 'string', 'max:20'],
+            'is_active' => ['sometimes', 'boolean'],
         ];
     }
 }
